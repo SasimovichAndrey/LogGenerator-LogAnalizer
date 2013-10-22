@@ -26,6 +26,7 @@ public class Program {
 		}
 	}
 	
+	// Получение имени файла из строки пути
 	private static String getFileName(String path){
 		String fileName;
 		try{
