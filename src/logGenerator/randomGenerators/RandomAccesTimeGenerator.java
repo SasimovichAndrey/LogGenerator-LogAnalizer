@@ -3,10 +3,8 @@ package logGenerator.randomGenerators;
 import java.util.Date;
 import java.util.Random;
 
-import logGenerator.logGenerating.logFileRecord.RequestTime;
-
 public class RandomAccesTimeGenerator {
-	public RequestTime generate(Random rnd, Date startDate){
+	public Date generate(Random rnd, Date startDate){
 		Date curDate = new Date();
 		Date minDate = startDate;
 		
@@ -19,10 +17,10 @@ public class RandomAccesTimeGenerator {
 				
 		Date rndDate = new Date(rndYear, rndMonth, rndDay, rndHour, rndMin, rndSeconds);
 		
-		return new RequestTime(rndDate);
+		return rndDate;
 	}
 	
-	public RequestTime generate(Random rnd){
+	public Date generate(Random rnd){
 		Date curDate = new Date();
 		Date minDate = new Date(0);
 		
@@ -35,6 +33,6 @@ public class RandomAccesTimeGenerator {
 				
 		Date rndDate = new Date(rndYear, rndMonth, rndDay, rndHour, rndMin, rndSeconds);
 		
-		return new RequestTime(rndDate);
+		return rndDate;
 	}
 }

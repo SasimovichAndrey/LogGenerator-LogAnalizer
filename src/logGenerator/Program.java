@@ -9,7 +9,9 @@ import java.util.HashMap;
 import java.util.List;
 
 import logGenerator.logGenerating.AccessLog;
+import logGenerator.logGenerating.AccessLogPrinter;
 import logGenerator.logGenerating.LogFileDataSetGenerator;
+import logGenerator.logGenerating.LogWriteException;
 import logGenerator.logGenerating.logFileRecord.LogFileRecord;
 import logGenerator.requestProcessing.RequestParser;
 import logGenerator.requestProcessing.exceptions.RequestFormatException;
@@ -44,7 +46,8 @@ public class Program {
 		TextInterface txtInterface = new TextInterface();
 
 		List<LogFileRecord> recordList;
-		AccessLog logFile;
+		AccessLog logFile = null;
+		AccessLogPrinter logPrinter = null;
 		PrintWriter writer = null;
 		
 		String filePath = getFileDirectory(request.get(ProgramParamConstants.FILE_NAME_PARAM));
@@ -61,8 +64,8 @@ public class Program {
 			
 			logFile = new AccessLog(recordList); 
 			writer = new PrintWriter(new BufferedWriter(new FileWriter(filePath + fileName) ));
-
-			logFile.SaveToTxt(writer);		// Запись текста в файл
+			logPrinter = new AccessLogPrinter();
+			logPrinter.printToTxt(logFile, writer);			// Запись текста в файл
 			
 			txtInterface.printSuccess(filePath + fileName);
 		}
@@ -74,6 +77,9 @@ public class Program {
 		}
 		catch(IOException e){
 			System.out.println("IOException");
+		}
+		catch(LogWriteException e){
+			System.out.println("LogWriteException");
 		}
 		finally{
 			if(writer != null)

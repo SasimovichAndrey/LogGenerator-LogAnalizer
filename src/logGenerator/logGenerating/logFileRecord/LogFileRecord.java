@@ -1,10 +1,12 @@
 package logGenerator.logGenerating.logFileRecord;
 
+import java.util.Date;
+
 
 
 public class LogFileRecord {
 	private IpAddress ipAddress;
-	private RequestTime requestTime;
+	private Date requestTime;
 	private RequestInfo requestInfo;
 	private StatusCode statusCode;
 	private int bytesReturned;
@@ -17,11 +19,11 @@ public class LogFileRecord {
 	public void setIpAddress(IpAddress ipAddress) {
 		this.ipAddress = ipAddress;
 	}
-	public void setRequestTime(RequestTime requestTime) {
+	public void setRequestTime(Date requestTime) {
 		this.requestTime = requestTime;
 	}
 	
-	public RequestTime getRequestTime(){
+	public Date getRequestTime(){
 		return this.requestTime;
 	}
 	

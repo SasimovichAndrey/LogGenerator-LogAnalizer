@@ -24,4 +24,8 @@ public class IpAddress {
 	public String toString(){
 		return Short.toString(octets[0]) + '.' + Short.toString(octets[1]) + '.' + Short.toString(octets[2]) + '.' + Short.toString(octets[3]);
 	}
+	
+	public int getOctetCount(){
+		return 4;
+	}
 }
