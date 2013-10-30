@@ -1,23 +1,27 @@
 package logGenerator.logGenerating;
 
 import logGenerator.logGenerating.logFileRecord.LogFileRecord;
-import logGenerator.logGenerating.recordformatting.FormatException;
 import logGenerator.logGenerating.recordformatting.IPAdressFormatter;
 import logGenerator.logGenerating.recordformatting.RequestInfoFormatter;
 import logGenerator.logGenerating.recordformatting.RequestTimeFormatter;
 
 public class LogRecordFormatter {
 	private String separator = " "; 
-
+	//private String pattern = null;
+	
 	public LogRecordFormatter(){
 		super();
 	}
-	
-	public LogRecordFormatter(String separator){
-		
+
+	public String getSeparator() {
+		return separator;
+	}
+
+	public void setSeparator(String separator) {
+		this.separator = separator;
 	}
 	
-	public String format(LogFileRecord record) throws FormatException{
+	public String format(LogFileRecord record) throws IllegalArgumentException{
 		StringBuffer res = new StringBuffer();
 
 		res.append(new IPAdressFormatter().format(record.getIpAddress()));

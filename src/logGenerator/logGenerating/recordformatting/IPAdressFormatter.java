@@ -3,9 +3,9 @@ package logGenerator.logGenerating.recordformatting;
 import logGenerator.logGenerating.logFileRecord.IpAddress;
 
 public class IPAdressFormatter {
-	public String format(IpAddress ipadress) throws FormatException{
+	public String format(IpAddress ipadress) throws IllegalArgumentException{
 		if(ipadress == null){
-			throw new FormatException("Null pointer: ipadress", new NullPointerException());
+			throw new IllegalArgumentException("Null pointer: ipadress");
 		}
 		StringBuilder builder = new StringBuilder();
 		for(int i = 0; i < ipadress.getOctetCount(); i++){

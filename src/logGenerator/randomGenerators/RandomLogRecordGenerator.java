@@ -14,11 +14,11 @@ public class RandomLogRecordGenerator {
 	public LogFileRecord generate(){
 		LogFileRecord record = new LogFileRecord();
 		
-		record.setIpAddress(new RandomIpAdressGenerator().generate(rnd));
-		record.setRequestTime(new RandomAccesTimeGenerator().generate(rnd));
-		record.setRequestInfo(new RandomRequestInfoGenerator().generate(rnd));
+		record.setIpAddress(new RandomIpAdressGenerator(rnd).generate());
+		record.setRequestTime(new RandomAccesTimeGenerator(rnd).generate());
+		record.setRequestInfo(new RandomRequestInfoGenerator(rnd).generate());
 		record.setBytesReturned(rnd.nextInt(Integer.MAX_VALUE));
-		record.setStatusCode(new RandomHttpStatusCodeGenerator().generate(rnd));
+		record.setStatusCode(new RandomHttpStatusCodeGenerator(rnd).generate());
 		
 		return record;
 	}

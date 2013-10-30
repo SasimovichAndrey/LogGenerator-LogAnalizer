@@ -15,9 +15,9 @@ public class HttpRequstTypeFormatter {
 		return map;
 	}
 	
-	public String format(HttpRequestType type) throws FormatException{
+	public String format(HttpRequestType type) throws IllegalArgumentException{
 		if(type == null)
-			throw new FormatException("Null pointer: type");
+			throw new IllegalArgumentException("Null pointer: type");
 		
 		StringBuilder builder = new StringBuilder();
 		builder.append(reqTypeMap.get(type));

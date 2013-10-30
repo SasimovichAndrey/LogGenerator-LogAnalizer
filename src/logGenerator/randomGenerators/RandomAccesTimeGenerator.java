@@ -4,7 +4,14 @@ import java.util.Date;
 import java.util.Random;
 
 public class RandomAccesTimeGenerator {
-	public Date generate(Random rnd, Date startDate){
+	private Random rnd;
+	
+	public RandomAccesTimeGenerator(Random rnd) {
+		super();
+		this.rnd = rnd;
+	}
+
+	public Date generate(Date startDate){
 		Date curDate = new Date();
 		Date minDate = startDate;
 		
@@ -20,7 +27,7 @@ public class RandomAccesTimeGenerator {
 		return rndDate;
 	}
 	
-	public Date generate(Random rnd){
+	public Date generate(){
 		Date curDate = new Date();
 		Date minDate = new Date(0);
 		

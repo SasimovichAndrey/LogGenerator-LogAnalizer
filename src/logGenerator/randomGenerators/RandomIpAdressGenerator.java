@@ -6,8 +6,14 @@ import logGenerator.exceptions.IllegalValueException;
 import logGenerator.logGenerating.logFileRecord.IpAddress;
 
 public class RandomIpAdressGenerator {
+	private Random rnd;
 	
-	public IpAddress generate(Random rnd){
+	public RandomIpAdressGenerator(Random rnd) {
+		super();
+		this.rnd = rnd;
+	}
+
+	public IpAddress generate(){
 		IpAddress ipAdress = new IpAddress();
 		
 		try {

@@ -4,7 +4,6 @@ import java.io.PrintWriter;
 import java.util.List;
 
 import logGenerator.logGenerating.logFileRecord.LogFileRecord;
-import logGenerator.logGenerating.recordformatting.FormatException;
 
 public class AccessLogPrinter {
 	public void printToTxt(AccessLog log, PrintWriter writer) throws LogWriteException{
@@ -14,7 +13,7 @@ public class AccessLogPrinter {
 			try{
 				writer.write(formatter.format(logRecords.get(i)));
 			}
-			catch(FormatException e){
+			catch(IllegalArgumentException e){
 				throw new LogWriteException("Some of record fields are invalid", e);
 			}
 			writer.write(System.getProperty("line.separator"));

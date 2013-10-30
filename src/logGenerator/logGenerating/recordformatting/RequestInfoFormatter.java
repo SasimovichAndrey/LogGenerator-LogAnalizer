@@ -21,9 +21,9 @@ public class RequestInfoFormatter {
 		return fieldSeparator;
 	}
 	
-	public String format(RequestInfo reqInfo) throws FormatException{
+	public String format(RequestInfo reqInfo) throws IllegalArgumentException{
 		if(reqInfo == null)
-			throw new FormatException("Null pointer : reqInfo", new NullPointerException());
+			throw new IllegalArgumentException("Null pointer : reqInfo");
 		
 		StringBuilder builder = new StringBuilder();
 		

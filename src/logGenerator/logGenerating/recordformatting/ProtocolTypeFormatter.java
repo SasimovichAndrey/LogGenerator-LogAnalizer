@@ -18,9 +18,9 @@ public class ProtocolTypeFormatter {
 		return map;
 	}
 	
-	public String format(ProtocolType type) throws FormatException{
+	public String format(ProtocolType type) throws IllegalArgumentException{
 		if(type == null)
-			throw new FormatException("Null pointer: type", new NullPointerException());
+			throw new IllegalArgumentException("Null pointer: type");
 		
 		StringBuilder builder = new StringBuilder();
 		

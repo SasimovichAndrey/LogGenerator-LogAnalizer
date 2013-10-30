@@ -3,11 +3,17 @@ package logGenerator.randomGenerators;
 import java.util.Random;
 
 public class ProbabyilityGenerator {
-	public Object generate(Object[] objArr, Random rnd){
+	private Random rnd;
+	
+	public ProbabyilityGenerator(Random rnd){
+		this.rnd = rnd;
+	}
+	
+	public Object generate(Object[] objArr){
 		int rand = rnd.nextInt(objArr.length);
 		return objArr[rand];
 	}
-	public Object generate(Object[] objArr, int[] probArr, Random rnd){
+	public Object generate(Object[] objArr, int[] probArr){
 		int sum = 0;
 		for(int i = 0; i < probArr.length; i++){
 			sum += probArr[i];
