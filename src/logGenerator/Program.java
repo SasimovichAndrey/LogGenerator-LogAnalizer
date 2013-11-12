@@ -28,7 +28,7 @@ public class Program {
 		}
 	}
 	
-	// Получение имени файла из строки пути
+	// пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ
 	private static String getFileName(String path){
 		String fileName;
 		try{
@@ -60,12 +60,12 @@ public class Program {
 		LogFileDataSetGenerator dataSetGenerator = new LogFileDataSetGenerator();
 		try{
 			strCount = Integer.parseInt(request.get(ProgramParamConstants.STR_COUNT_PARAM));
-			recordList = dataSetGenerator.generate(strCount);		// Генерация записей лог-файла
+			recordList = dataSetGenerator.generate(strCount);		// пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ-пїЅпїЅпїЅпїЅпїЅ
 			
 			logFile = new AccessLog(recordList); 
 			writer = new PrintWriter(new BufferedWriter(new FileWriter(filePath + fileName) ));
 			logPrinter = new AccessLogPrinter();
-			logPrinter.printToTxt(logFile, writer);			// Запись текста в файл
+			logPrinter.printToTxt(logFile, writer);			// пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅ
 			
 			txtInterface.printSuccess(filePath + fileName);
 		}

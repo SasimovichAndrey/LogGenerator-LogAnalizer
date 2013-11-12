@@ -28,4 +28,14 @@ public class IpAddress {
 	public int getOctetCount(){
 		return 4;
 	}
+        
+        public boolean equals(Object obj){
+            if(obj instanceof IpAddress == false) return false;
+            IpAddress ip = (IpAddress)obj;
+            for(int i = 0; i < 4; i++){
+                if(this.octets[i] != ip.octets[i])
+                    return false;
+            }
+            return true;
+        }
 }

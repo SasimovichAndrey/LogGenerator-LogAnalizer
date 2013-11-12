@@ -36,4 +36,14 @@ public class RequestInfo {
 		
 		return builder.toString();
 	}
+        
+        public boolean equals(Object obj){
+            if(obj instanceof RequestInfo == false) return false;
+            RequestInfo ri = (RequestInfo)obj;
+            if(!(this.protocol == null ? ri.protocol == null : this.protocol.equals(ri.protocol)))return false;
+            if(!(this.requestType == null ? ri.requestType == null : this.requestType.equals(ri.requestType))) return false;
+            if(!(this.requestedSource == null ? ri.requestedSource == null : this.requestedSource.equals(ri.requestedSource))) return false;
+            
+            return true;
+        }
 }

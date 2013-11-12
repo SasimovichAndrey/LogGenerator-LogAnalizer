@@ -2,5 +2,8 @@ package logGenerator.logGenerating.logFileRecord;
 
 public enum HttpRequestType {
 	GET,
-	POST
+	POST;
+        
+        public static final String GET_STRING = "GET";
+        public static final String POST_STRING = "POST";
 }

@@ -6,32 +6,21 @@ import logGenerator.logGenerating.recordformatting.RequestInfoFormatter;
 import logGenerator.logGenerating.recordformatting.RequestTimeFormatter;
 
 public class LogRecordFormatter {
-	private String separator = " "; 
-	//private String pattern = null;
-	
 	public LogRecordFormatter(){
 		super();
-	}
-
-	public String getSeparator() {
-		return separator;
-	}
-
-	public void setSeparator(String separator) {
-		this.separator = separator;
 	}
 	
 	public String format(LogFileRecord record) throws IllegalArgumentException{
 		StringBuffer res = new StringBuffer();
 
 		res.append(new IPAdressFormatter().format(record.getIpAddress()));
-		res.append(separator);
+		res.append(" - - [");
 		res.append(new RequestTimeFormatter().format(record.getRequestTime()));
-		res.append(separator);
+		res.append("] \"");
 		res.append(new RequestInfoFormatter().format(record.getRequestInfo()));
-		res.append(separator);
+		res.append("\" ");
 		res.append(record.getStatusCode().getIntegerCode());
-		res.append(separator);
+		res.append(" ");
 		res.append(record.getBytesReturned());
 		
 		return res.toString();

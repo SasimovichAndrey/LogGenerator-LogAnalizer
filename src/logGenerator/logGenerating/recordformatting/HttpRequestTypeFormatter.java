@@ -5,13 +5,13 @@ import java.util.Map;
 
 import logGenerator.logGenerating.logFileRecord.HttpRequestType;
 
-public class HttpRequstTypeFormatter {
+public class HttpRequestTypeFormatter {
 	private static final Map<HttpRequestType, String> reqTypeMap = reqTypeMapInit(); 
-	
+        
 	private static Map<HttpRequestType, String> reqTypeMapInit(){
 		Map<HttpRequestType, String> map = new HashMap<HttpRequestType, String>();
-		map.put(HttpRequestType.GET, "GET");
-		map.put(HttpRequestType.POST, "POST");
+		map.put(HttpRequestType.GET, HttpRequestType.GET_STRING);
+		map.put(HttpRequestType.POST, HttpRequestType.POST_STRING);
 		return map;
 	}
 	

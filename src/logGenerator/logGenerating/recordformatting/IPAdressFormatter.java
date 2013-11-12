@@ -10,7 +10,8 @@ public class IPAdressFormatter {
 		StringBuilder builder = new StringBuilder();
 		for(int i = 0; i < ipadress.getOctetCount(); i++){
 			builder.append(ipadress.getOctet(i));
-			builder.append('.');
+                        if(i != ipadress.getOctetCount() - 1)
+                            builder.append('.');
 		}
 		
 		return builder.toString(); 

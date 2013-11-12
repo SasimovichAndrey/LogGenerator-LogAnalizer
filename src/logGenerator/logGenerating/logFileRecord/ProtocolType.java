@@ -1,7 +1,8 @@
 package logGenerator.logGenerating.logFileRecord;
 
 public enum ProtocolType{
-	HTTP("HTTP"),
+	HTTP11("HTTP/1.1"),
+        HTTP10("HTTP/1.0"),
 	FTP("FTP"),
 	SHHTP("SHTTP"),
 	SSL("SSL");
