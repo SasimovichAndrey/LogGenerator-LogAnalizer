@@ -2,7 +2,7 @@ package logGenerator.logParsing.recordfieldparsers;
 
 import java.util.HashMap;
 import java.util.Map;
-import logGenerator.logGenerating.logFileRecord.ProtocolType;
+import logGenerator.logFileRecord.ProtocolType;
 
 public class ProtocolTypeParser {
     private static final Map<String, ProtocolType> protTypeMap = protTypeMapInit(); 
@@ -18,7 +18,7 @@ public class ProtocolTypeParser {
 		return map;
 	}
     
-    public ProtocolType parse(String string){
+    public ProtocolType parse(String string) throws IllegalArgumentException{
         if(string == null)
             throw new IllegalArgumentException("Parameter 'string' is null");
         

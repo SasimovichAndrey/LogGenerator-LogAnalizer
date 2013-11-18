@@ -2,7 +2,7 @@ package logGenerator.logParsing;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
-import logGenerator.logGenerating.logFileRecord.LogFileRecord;
+import logGenerator.logFileRecord.LogFileRecord;
 import logGenerator.logParsing.recordfieldparsers.IPAdressParser;
 import logGenerator.logParsing.recordfieldparsers.RequestInfoParser;
 import logGenerator.logParsing.recordfieldparsers.RequestTimeParser;

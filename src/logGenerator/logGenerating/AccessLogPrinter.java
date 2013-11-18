@@ -1,9 +1,10 @@
 package logGenerator.logGenerating;
 
+import logGenerator.recordformatting.LogRecordFormatter;
 import java.io.PrintWriter;
 import java.util.List;
 
-import logGenerator.logGenerating.logFileRecord.LogFileRecord;
+import logGenerator.logFileRecord.LogFileRecord;
 
 public class AccessLogPrinter {
 	public void printToTxt(AccessLog log, PrintWriter writer) throws LogWriteException{

@@ -4,8 +4,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
-import logGenerator.logGenerating.logFileRecord.LogFileRecord;
-import logGenerator.randomGenerators.RandomLogRecordGenerator;
+import logGenerator.logFileRecord.LogFileRecord;
+import logGenerator.logGenerating.randomGenerators.RandomLogRecordGenerator;
 import logGenerator.requestProcessing.exceptions.RequestFormatException;
 
 public class LogFileDataSetGenerator {

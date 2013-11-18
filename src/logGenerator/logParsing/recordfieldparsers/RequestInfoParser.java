@@ -1,6 +1,6 @@
 package logGenerator.logParsing.recordfieldparsers;
 
-import logGenerator.logGenerating.logFileRecord.RequestInfo;
+import logGenerator.logFileRecord.RequestInfo;
 import logGenerator.logParsing.recordfieldparsers.exceptions.FormatException;
 
 public class RequestInfoParser {
@@ -8,7 +8,7 @@ public class RequestInfoParser {
         super();
     }
     
-    public RequestInfo parse(String string) throws FormatException{
+    public RequestInfo parse(String string) throws FormatException, IllegalArgumentException{
         if(string == null)
             throw new IllegalArgumentException("Parameter 'string' is null");
         

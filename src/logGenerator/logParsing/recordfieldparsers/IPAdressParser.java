@@ -1,11 +1,11 @@
 package logGenerator.logParsing.recordfieldparsers;
 
 import logGenerator.exceptions.IllegalValueException;
-import logGenerator.logGenerating.logFileRecord.IpAddress;
+import logGenerator.logFileRecord.IpAddress;
 import logGenerator.logParsing.recordfieldparsers.exceptions.FormatException;
 
 public class IPAdressParser {
-    public IpAddress parse(String string) throws FormatException{
+    public IpAddress parse(String string) throws FormatException, IllegalArgumentException{
         if(string == null)
             throw new IllegalArgumentException("Parameter 'string' is null");
         String [] splited = string.split("\\.");

@@ -12,7 +12,7 @@ import logGenerator.logGenerating.AccessLog;
 import logGenerator.logGenerating.AccessLogPrinter;
 import logGenerator.logGenerating.LogFileDataSetGenerator;
 import logGenerator.logGenerating.LogWriteException;
-import logGenerator.logGenerating.logFileRecord.LogFileRecord;
+import logGenerator.logFileRecord.LogFileRecord;
 import logGenerator.requestProcessing.RequestParser;
 import logGenerator.requestProcessing.exceptions.RequestFormatException;
 

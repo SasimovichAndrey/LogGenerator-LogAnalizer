@@ -2,7 +2,7 @@ package logGenerator.logGenerating;
 
 import java.util.List;
 
-import logGenerator.logGenerating.logFileRecord.LogFileRecord;
+import logGenerator.logFileRecord.LogFileRecord;
 
 public class AccessLog {
 	private List<LogFileRecord> logRecords;

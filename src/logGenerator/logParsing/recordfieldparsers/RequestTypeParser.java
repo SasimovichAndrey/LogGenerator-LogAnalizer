@@ -2,7 +2,7 @@ package logGenerator.logParsing.recordfieldparsers;
 
 import java.util.HashMap;
 import java.util.Map;
-import logGenerator.logGenerating.logFileRecord.HttpRequestType;
+import logGenerator.logFileRecord.HttpRequestType;
 
 public class RequestTypeParser {
     private static final Map<String, HttpRequestType> reqTypeMap = reqTypeMapInit(); 
