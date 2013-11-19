@@ -9,7 +9,7 @@ public class RequestTimeFormatter {
 		if(time == null)
 			throw new IllegalArgumentException("Null pointer : time");
                 Locale loc = new Locale("en");
-		SimpleDateFormat format = new SimpleDateFormat("dd/MMM/yyyy:hh:mm:ss Z", loc);
+		SimpleDateFormat format = new SimpleDateFormat("dd/MMM/yyyy:HH:mm:ss Z", loc);
 		
 		return format.format(time);
 	}

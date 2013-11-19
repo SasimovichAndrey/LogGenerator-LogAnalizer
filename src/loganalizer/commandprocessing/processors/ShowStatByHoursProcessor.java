@@ -13,7 +13,6 @@ public class ShowStatByHoursProcessor implements ICommandProcessor{
 
     @Override
     public CommandResult process(RecordSetProcessor processor) {
-        int hour = 0;
         CommandResult result = new CommandResult();
         result.setCommand(UserCommandType.SHOW_REQUEST_BY_HOUR_STATISTICS);
         Map<Integer, Integer> resultMap = new HashMap<Integer, Integer>();

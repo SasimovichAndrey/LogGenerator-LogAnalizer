@@ -13,7 +13,7 @@ public class RequestTimeParser {
         
         Date resDate = null;
         Locale loc = new Locale("en");
-        SimpleDateFormat df = new SimpleDateFormat("dd/MMM/yyyy:hh:mm:ss Z", loc);
+        SimpleDateFormat df = new SimpleDateFormat("dd/MMM/yyyy:HH:mm:ss Z", loc);
         try{
             resDate = df.parse(string);
         }
