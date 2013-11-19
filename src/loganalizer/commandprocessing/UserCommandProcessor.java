@@ -9,6 +9,7 @@ import loganalizer.commandprocessing.CommandResult;
 import loganalizer.commandprocessing.processors.ExitProcessor;
 import loganalizer.commandprocessing.processors.ICommandProcessor;
 import loganalizer.commandprocessing.processors.ShowCodeStatProcessor;
+import loganalizer.commandprocessing.processors.ShowFileTypeStatProcessor;
 import loganalizer.commandprocessing.processors.ShowStatByHoursProcessor;
 import loganalizer.textinterface.TextInterface;
 
@@ -25,6 +26,7 @@ public class UserCommandProcessor {
         map.put(UserCommandType.EXIT, new ExitProcessor());
         map.put(UserCommandType.SHOW_STATUS_STATISTICTS, new ShowCodeStatProcessor());
         map.put(UserCommandType.SHOW_REQUEST_BY_HOUR_STATISTICS, new ShowStatByHoursProcessor());
+        map.put(UserCommandType.SHOW_REQUEST_BY_FILE_TYPE_STATISTICS, new ShowFileTypeStatProcessor());
         
         return map;
     }

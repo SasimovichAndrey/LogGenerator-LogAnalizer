@@ -13,6 +13,7 @@ import loganalizer.commandprocessing.CommandResult;
 import loganalizer.exceptions.IntCommandFormatException;
 import loganalizer.textinterface.resultprinters.IResultPrinter;
 import loganalizer.textinterface.resultprinters.ShowCodeStatPrinter;
+import loganalizer.textinterface.resultprinters.ShowStatByFileTypePrinter;
 import loganalizer.textinterface.resultprinters.ShowStatByHourPrinter;
 import loganalizer.textinterface.resultprinters.exceptions.UserCommandTypeException;
 
@@ -28,6 +29,7 @@ public class TextInterface {
         map.put(0, UserCommandType.EXIT);
         map.put(1, UserCommandType.SHOW_STATUS_STATISTICTS);
         map.put(2, UserCommandType.SHOW_REQUEST_BY_HOUR_STATISTICS);
+        map.put(3, UserCommandType.SHOW_REQUEST_BY_FILE_TYPE_STATISTICS);
         
         return map;
     }
@@ -37,6 +39,7 @@ public class TextInterface {
         
         map.put(UserCommandType.SHOW_STATUS_STATISTICTS, new ShowCodeStatPrinter(writer));
         map.put(UserCommandType.SHOW_REQUEST_BY_HOUR_STATISTICS, new ShowStatByHourPrinter(writer));
+        map.put(UserCommandType.SHOW_REQUEST_BY_FILE_TYPE_STATISTICS, new ShowStatByFileTypePrinter(writer));
         
         return map;
     }

@@ -13,5 +13,6 @@ package loganalizer.commandprocessing;
 public enum UserCommandType {
     SHOW_STATUS_STATISTICTS,
     SHOW_REQUEST_BY_HOUR_STATISTICS,
+    SHOW_REQUEST_BY_FILE_TYPE_STATISTICS,
     EXIT
 }

@@ -1,10 +1,7 @@
 package loganalizer.textinterface.resultprinters;
 
 import java.io.PrintWriter;
-import java.util.Iterator;
 import java.util.Map;
-import java.util.Set;
-import logGenerator.logFileRecord.StatusCode;
 import loganalizer.commandprocessing.CommandResult;
 import loganalizer.commandprocessing.UserCommandType;
 import loganalizer.textinterface.resultprinters.exceptions.UserCommandTypeException;

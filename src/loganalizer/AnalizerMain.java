@@ -42,7 +42,6 @@ public class AnalizerMain {
             }
             catch(IntCommandFormatException ex){
                 System.out.println("Input an integer command value");
-                continue;
             }
         }while(true);
     }

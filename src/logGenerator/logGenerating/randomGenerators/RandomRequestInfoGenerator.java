@@ -17,7 +17,7 @@ public class RandomRequestInfoGenerator {
 		RequestInfo reqInfo = new RequestInfo();
 		
 		reqInfo.setProtocol(new RandomProtocolGenerator(rnd).generate());
-		String [] fileNameArr = new String[]{"/index.html", "/guest.html", "/contacts.html"};
+		String [] fileNameArr = new String[]{"/index.html", "/guest.html", "/contacts.html", "/img/picture.jpg", "/script/script.js"};
 		reqInfo.setRequestedSource((String)new ProbabyilityGenerator(rnd).generate(fileNameArr));
 		reqInfo.setRequestType(new RandomHttpRequstTypeGenerator(rnd).generate()); 
 		

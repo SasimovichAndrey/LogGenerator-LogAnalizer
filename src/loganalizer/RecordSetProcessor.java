@@ -1,5 +1,6 @@
 package loganalizer;
 
+import java.io.File;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
@@ -26,6 +27,42 @@ public class RecordSetProcessor {
         }
         
         return statuses;
+    }
+    
+    private String getFileExtension(String fileName){
+        String [] splited = fileName.split("\\.");
+        if(splited.length != 1)
+            return splited[splited.length - 1];
+        else
+            return null;
+    }
+    
+    public List<String> getFileTypes(){
+        List<String> types = new ArrayList<String>();
+        
+        for(LogFileRecord record : records){
+            String path = record.getRequestInfo().getRequestedSource();
+            File sourceFile = new File(path);
+            String ext = getFileExtension(sourceFile.getName());
+            if(ext != null && !types.contains(ext))
+                types.add(ext);
+        }
+        
+        return types;
+    }
+    
+    public List<LogFileRecord> getRecordsByFileExtension(String extension){
+        List<LogFileRecord> resRecords = new ArrayList<LogFileRecord>();
+        
+        for(LogFileRecord record : records){
+            String path = record.getRequestInfo().getRequestedSource();
+            File sourceFile = new File(path);
+            String ext = getFileExtension(sourceFile.getName());
+            if(extension.equals(ext))
+                resRecords.add(record);
+        }
+        
+        return resRecords;
     }
     
     public List<LogFileRecord> getRecordsByStatusCode(StatusCode code){
